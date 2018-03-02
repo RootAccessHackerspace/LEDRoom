@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-quote = 'HELLO WORLD AND WELCOME TO ROOT ACCESS HACKERSPACE WE ARE READY TO BELIEVE YOU'
+quote = 'HELLO WORLD AND WELCOME TO ROOT ACCESS HACKERSPACE WERE READY TO BELIEVE YOU'
 
 dur = {'.': 1, '-': 3, 'letter': 3, 'space': 7, 'none': 0}
 morse = {
@@ -13,9 +13,9 @@ morse = {
     '8': '---..', '9': '----.'}
 
 data_table = {
-'.': '1',
-'-': '2',
-' ': '0'
+    '.': '1',
+    '-': '2',
+    ' ': '0'
 }
 
 encoded = ''
@@ -33,8 +33,6 @@ for c in quote:
     elif c == ' ':
         encoded += ' '
 
-# encoded += ' '
-
 # Generate data
 data = []
 for c in encoded:
@@ -51,7 +49,7 @@ for c in encoded:
         data.append(0)
 
 # Generate output
-output = '// File Generated with generateMorseH.py\n'
+output = '// File Generated with generateMorse.py\n'
 output += '// ' + quote + '\n'
 output += 'const uint8_t encoded[] PROGMEM = {'
 output += ', '.join(map(str, data));
